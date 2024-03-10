@@ -1,0 +1,12 @@
+@keyframes fillProgress {
+    from { width: 0%; }
+}
+.chart {
+    margin: 5px;    
+}
+.chart h6 {
+    margin-left: 6px;
+}
+.chart .animation {
+    animation: fillProgress 2s ease forwards;
+}

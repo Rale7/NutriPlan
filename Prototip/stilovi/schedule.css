@@ -1,0 +1,53 @@
+.schedule-container {
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 100%;
+    height: 600px;
+}
+table {
+    border-collapse: collapse;
+    background-color: white;
+    min-width: 600px;
+    font-size: 32px;
+}
+th, td {
+    border-right: 1px dotted lightgray;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}
+#schedule-table th:first-child,
+#schedule-table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: #fff; /* Ensure the background color is the same as the table's background */
+}
+#schedule-table td:not(:first-child) {
+    cursor: default !important;
+}
+#schedule-table td:not(:first-child):hover {
+    transform: scale(1.2);
+}
+#schedule-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+#schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px;
+}
+  
+#schedule-table th, #schedule-table td {
+    border-right: 1px dotted lightgrey;
+    padding: 8px;
+    text-align: center;
+}
+
+#schedule-table th {
+    background-color: #f2f2f2;
+}

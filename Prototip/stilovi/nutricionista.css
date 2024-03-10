@@ -1,0 +1,117 @@
+.telo {
+    background-color: lightgrey;
+}
+.profil-kontejner {
+    margin: 5px;
+}
+.profil {
+    border-radius: 10px;
+    background-color: white;
+    width: 100px;
+    margin: 20px;
+}
+.tekst-slika {
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+}
+.tekst-slika img {
+    width: 35px;
+    height: 35px;
+}
+.tekst-slika p {
+    margin-left: 20px;
+    margin-top: 3px;
+    font-size: larger;
+}
+.planovi-kontejner {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+.s2 {
+    color: lightgrey;
+    margin-left: auto;
+}
+.moji-planovi {    
+    display: flex;
+    justify-content: space-between;    
+}
+.komentari {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.comment-list {
+    list-style-type: none;
+}
+.comments-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .comment {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .comment-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .comment-author {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .comment-date {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .comment-text {
+    font-size: 16px;
+    color: #444;
+  }
+h2 {
+    margin-left: 20px;
+}
+#commentForm {
+    margin-bottom: 20px; /* Add some space below the form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #commentAuthor,
+  #commentText,
+  #commentForm button {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  #commentText {
+    height: 100px; /* Set a fixed height for the comment textarea */
+  }
+  
+  #commentForm button {
+    
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #commentForm button:hover {
+    background-color: #45a049;
+  }
+  

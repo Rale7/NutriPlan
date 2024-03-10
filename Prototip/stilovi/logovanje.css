@@ -1,0 +1,63 @@
+body {
+    background-image: url("../slike/vockice2.jpg");
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+form {
+    height: 100%;
+    background-color: #f2f2f280;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input[type="text"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 2px; /* Add some margin between elements */
+    font-family: monospace;
+}
+button {
+    background-color: limegreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: monospace;
+}
+button:hover {
+    background-color: rgb(40, 195, 40);
+}
+h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+    font-family: monospace;
+}
+a:link {
+    text-align: center;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: orange;
+}
+a:active {
+    color: blue;
+}
+
