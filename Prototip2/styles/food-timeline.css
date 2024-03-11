@@ -1,0 +1,78 @@
+.food-time {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 10%;
+    max-width: 10%;
+}
+
+.circle-border {
+    border-style: solid;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    padding-top: 0px;
+    margin-top: -10px;
+}
+
+.timeline-legend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #000000;
+    color: #ffa500;
+    border-top-style: solid;
+    border-top-color: #ff9900;
+    width: 100%;
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+.food-timeline {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.food-time-img {
+    font-size: 64px;
+    margin-bottom: 120px;
+    margin-top: 20px;
+    cursor: default;
+    user-select: none;
+}
+
+.food-time-img:hover {
+    transform: scale(1.2);
+}
+
+.circle-border .doth {
+    width: 10%;
+    height: 10%;
+    padding-top: 0px;
+    margin-top: -1px;
+}
+
+.timeline-legend h6 {
+    margin-top: 10px;
+}
+
+.timeline-button {
+    font-size: 180.75%;
+    color: orange;
+    background-color: #000000;
+    border-top: 3px solid #ffa500;
+    border-left-style: none;
+    border-right-style: none;
+}

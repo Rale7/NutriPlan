@@ -1,37 +1,4 @@
-function generateCalendar() {
-    var today = new Date();
-    var currentMonth = today.getMonth();
-    var currentYear = today.getFullYear();
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-    var firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
-
-    document.getElementById("current-month").innerHTML = months[currentMonth];
-    document.getElementById("current-year").innerHTML = currentYear;
-
-    var calendarBody = document.getElementById("calendar-days");
-    calendarBody.innerHTML = "";
-
-    for (var i = 0; i < firstDayOfMonth; i++) {
-        var cell = document.createElement("li");
-        calendarBody.appendChild(cell)
-    }
-
-    for (var i = 1; i <= daysInMonth; i++) {
-        var cell = document.createElement("li");
-        if (i == today.getDate()) {
-            let span = document.createElement("span");
-            span.classList.add("active");
-            span.innerText = i;
-            cell.appendChild(span);
-        } else {
-            cell.innerHTML = i;
-        }
-        calendarBody.appendChild(cell);
-    }
-}
-
-function generateFoodTimeline() {
+export function generateFoodTimeline() {
 
     const hoursArray = [];
 
@@ -40,15 +7,17 @@ function generateFoodTimeline() {
         hoursArray.push(hour);
     }
 
-    foodTimeline = document.getElementById("timeline");
+    let foodTimeline = document.getElementById("timeline");
 
 
-    hoursArray.forEach(hour => {  
+    hoursArray.forEach(hour => { 
         let foodTime = document.createElement("div");
         foodTime.classList.add("food-time");
         let img = document.createElement("h1");
         img.classList.add("food-time-img");
-        if (hour == "10:00") {            
+        if (hour == "09:00") {
+            img.innerHTML = "&#127834";
+        } else if (hour == "10:00") {            
             img.innerHTML = "&#129370";
         } else if (hour == "16:00") {
             img.innerHTML = "&#127834";
@@ -86,7 +55,6 @@ function centerScroll(item, container) {
     const containerWidth = container.offsetWidth;    
     const shiftAmount = (itemRect.left - containerWidth / 2)
 
-    // Shift the container to bring the clicked item to the center
     container.scrollBy({
         left: shiftAmount,
         behavior: "smooth"
@@ -98,9 +66,13 @@ function changeFood(cell) {
     change_chart(document.getElementById('fat-progress'), "50%");
     change_chart(document.getElementById('carbs-progress'), "40%");
     change_chart(document.getElementById('protein-progress'), "30%");
-    curr_pict.innerHTML = cell.innerHTML;
+    if (cell.innerHTML == "&nbsp;") {
+        curr_pict.innerHTML = "&#x2753;"
+    } else {
+        curr_pict.innerHTML = cell.innerHTML;
+    }
     let food_name = document.getElementById('food-name');
-    food_name.innerHTML = "Ice Cream 2";
+    food_name.innerHTML = "Meal";
 }
 
 function change_chart(progressBar, percentage) {
@@ -111,7 +83,7 @@ function change_chart(progressBar, percentage) {
     progressBar.innerHTML = percentage;
   }
 
-function settingButtons() {
+export function settingButtons() {
     let buttonLeft = document.getElementById("left-button");
     let buttonRight = document.getElementById("right-button");
     let container = document.getElementById("timeline");
@@ -130,8 +102,3 @@ function settingButtons() {
         });
     });
 }
-
-
-generateCalendar();
-generateFoodTimeline();
-settingButtons();
