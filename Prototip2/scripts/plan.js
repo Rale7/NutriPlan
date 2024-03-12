@@ -1,7 +1,7 @@
 import { generateCalendar  } from "./calendar.js";
-import { generateFoodTimeline } from "./timeline.js";
-import { settingButtons } from "./timeline.js";
+import { generateFoodTimeline, settingButtons, food_finished } from "./timeline.js";
 
 generateCalendar();
 generateFoodTimeline();
 settingButtons();
+document.getElementById("change-meal-button").addEventListener("click", food_finished);

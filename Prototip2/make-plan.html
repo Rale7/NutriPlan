@@ -10,24 +10,20 @@
         <!-- Custom styles for this template -->
         <link href="sticky-footer-navbar.css" rel="stylesheet">
         <link rel="stylesheet" href="styles/make-plan.css">
+        <link rel="stylesheet" href="blocks.css">
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Top navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <div class="container-fluid"><a class="navbar-brand" href="#">Top navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <li class="nav-item active"><a class="nav-link" aria-current="page" href="#">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                        <li class="nav-item"><a class="nav-link" href="#">Link</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -39,25 +35,107 @@
         </nav>
         <div class="row">
             <div class="col-md-8">
-                <h3>Column title</h3> 
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+                <div class="basic-container" style="margin-right: -25px;">
+                    <div id="days" style="width: 100%; height: 100%;">
+                        <button id="addDay" type="button" class="btn btn-primary day-button" onclick="addDay()">+</button>                         
+                    </div>
+                </div>
+                <div class="basic-container grid-container"> 
+                    <button id="left-button" class="timeline-button">&#10094;</button>                     
+                    <div class="food-timeline" id="timeline"> 
+</div>                     
+                    <button id="right-button" class="timeline-button">&#10095;</button>                     
+                </div>                 
+                <div class="basic-container" style="margin-right: -25px;" "">
+                    <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+                        <div>
+                            <h1 id="trash-can" style="font-size: 87px; cursor: default;" ondragover="allowDrop(event)">&#128465;</h1> 
+                        </div>
+                        <div style="display: flex; flex-direction: column;">
+                            <button type="button" class="btn btn-primary control-button">Save</button>
+                            <button type="button" class="btn btn-primary control-button">Begin</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
                 <div class="basic-container">
-                    <div class="input-group mb-3"> 
-                        <input type="text" class="form-control" placeholder="food name" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">&#128269</button>
-                    </div>
-                    <div class="checkbox-div">
-                        <div class="form-check"><span> <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked> <label class="form-check-label" for="check1">Glutenfree</label> </span>
-                        </div>
-                        <div class="form-check"><span> <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something"> <label class="form-check-label" for="check2">Lactosefree</label> </span>
-                        </div>
-                    </div>
-                    <div class="checkbox-div">
-</div>                     
+                    <section class="bg-light pb-5 pt-5" style="background-color: #ffffff !important; width: 100%;">
+                        <div class="container pb-5 pt-5" style="width: 100%; display: inline-flex; flex-direction: column; align-items: center;"> 
+                            <div class="col-md-9 col-xl-8 ms-auto me-auto" style="width: 100%;"> 
+                                <form role="form"> 
+                                    <div class="align-items-center gx-2 row" style="width: 100%;">
+                                        <div class="col-sm mb-3"> 
+                                            <input type="text" class="form-control ps-4 pe-4 rounded-pill" placeholder="Food name"> 
+                                        </div>
+                                        <div class="col-sm-auto mb-3 text-end"> 
+                                            <button class="btn btn-danger p-2 rounded-pill search-button" aria-label="search" onclick="search(event)">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1.25em" height="1.25em" class="d-block h-auto">
+                                                    <g>
+                                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                                        <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"></path>
+                                                    </g>
+                                                </svg>
+                                            </button>                                             
+                                        </div>
+                                    </div>                                     
+                                </form>                                 
+                            </div>                             
+                            <div style="display: flex;">
+                                <ul class="list-group">
+                                    <li class="list-group-item food-checkbox">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Fruit
+                                    </li>
+                                    <li class="list-group-item food-checkbox">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Vegetables
+                                    </li>
+                                    <li class="list-group-item food-checkbox">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Meet
+                                    </li>
+                                    <li class="list-group-item food-checkbox">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Cereal
+                                    </li>
+                                    <li class="list-group-item food-checkbox">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Fish
+                                    </li>
+                                </ul>
+                                <ul class="list-group">
+                                    <li class="list-group-item food-checkbox">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Dairy
+                                    </li>
+                                    <li class="list-group-item food-checkbox">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Grains
+                                    </li>
+                                    <li class="list-group-item food-checkbox">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Tubers
+                                    </li>
+                                    <li class="list-group-item food-checkbox">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Sweets
+                                    </li>
+                                    <li class="list-group-item food-checkbox">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Drinks
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>                         
+                    </section>
+                    <div style="width: 100%;">
+                        <ul id="search-food" class="food-list"> 
+</ul>
+                    </div>                     
                 </div>
             </div>
         </div>
+        <script type="module" src="scripts/make_plan.js"></script>
     </body>
 </html>
